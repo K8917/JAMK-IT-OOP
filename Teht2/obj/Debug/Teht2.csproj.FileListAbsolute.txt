@@ -1,6 +1,0 @@
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\bin\Debug\Teht2.exe.config
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\bin\Debug\Teht2.exe
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\bin\Debug\Teht2.pdb
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\obj\Debug\Teht2.csprojResolveAssemblyReference.cache
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\obj\Debug\Teht2.exe
-D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht2\obj\Debug\Teht2.pdb
