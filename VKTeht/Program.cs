@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht6();
+            Teht7();
         }
 
         static void Harj1()
@@ -166,6 +166,19 @@ namespace VKTeht
             int km = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Bensaa kuluu " + (litraKm * km).ToString("#.##") + " Litraa ja se maksaa " + (litraKm*km*bHinta).ToString("#.##") + " Euroa.");
+        }
+        static void Teht7()
+        {
+            Console.Write("Anna vuosi: ");
+            int y = int.Parse(Console.ReadLine());
+            if (DateTime.IsLeapYear(y))
+            {
+                Console.WriteLine("Karkausvuosi");
+            }
+            else
+            {
+                Console.WriteLine("Ei Karkausvuosi");
+            }
         }
     }
 }
