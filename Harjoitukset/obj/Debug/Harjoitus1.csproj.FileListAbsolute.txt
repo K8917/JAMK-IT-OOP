@@ -4,3 +4,9 @@ c:\users\sami\documents\visual studio 2015\Projects\Harjoitukset\Harjoitukset\bi
 c:\users\sami\documents\visual studio 2015\Projects\Harjoitukset\Harjoitukset\obj\Debug\Harjoitus1.csprojResolveAssemblyReference.cache
 c:\users\sami\documents\visual studio 2015\Projects\Harjoitukset\Harjoitukset\obj\Debug\Harjoitukset.exe
 c:\users\sami\documents\visual studio 2015\Projects\Harjoitukset\Harjoitukset\obj\Debug\Harjoitukset.pdb
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\bin\Debug\Harjoitukset.exe.config
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\obj\Debug\Harjoitukset.exe
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\obj\Debug\Harjoitukset.pdb
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\bin\Debug\Harjoitukset.exe
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\bin\Debug\Harjoitukset.pdb
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Harjoitukset\obj\Debug\Harjoitus1.csprojResolveAssemblyReference.cache

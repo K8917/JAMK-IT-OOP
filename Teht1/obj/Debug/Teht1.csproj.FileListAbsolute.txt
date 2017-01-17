@@ -1,0 +1,6 @@
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\bin\Debug\Teht1.exe.config
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\bin\Debug\Teht1.exe
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\bin\Debug\Teht1.pdb
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\obj\Debug\Teht1.csprojResolveAssemblyReference.cache
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\obj\Debug\Teht1.exe
+D:\K8917\Harjoitukset\Olio-ohjelmointi\Teht1\obj\Debug\Teht1.pdb
