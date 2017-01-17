@@ -4,3 +4,9 @@ D:\K8917\Harjoitukset\Olio-ohjelmointi\VKTeht\bin\Debug\VKTeht.exe
 D:\K8917\Harjoitukset\Olio-ohjelmointi\VKTeht\bin\Debug\VKTeht.pdb
 D:\K8917\Harjoitukset\Olio-ohjelmointi\VKTeht\obj\Debug\VKTeht.exe
 D:\K8917\Harjoitukset\Olio-ohjelmointi\VKTeht\obj\Debug\VKTeht.pdb
+D:\K8917\VKTeht\bin\Debug\VKTeht.exe.config
+D:\K8917\VKTeht\obj\Debug\VKTeht.exe
+D:\K8917\VKTeht\obj\Debug\VKTeht.pdb
+D:\K8917\VKTeht\bin\Debug\VKTeht.exe
+D:\K8917\VKTeht\bin\Debug\VKTeht.pdb
+D:\K8917\VKTeht\obj\Debug\VKTeht.csprojResolveAssemblyReference.cache

@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht5();
+            Teht6();
         }
 
         static void Harj1()
@@ -140,11 +140,11 @@ namespace VKTeht
                 {
                     case 0:
                         aika[i] = (sek / 3600);
-                        sek -= aika[i];
+                        sek -= (aika[i] * 3600);
                         break;
                     case 1:
                         aika[i] = (sek / 60);
-                        sek -= aika[i];
+                        sek -= (aika[i] * 60);
                         break;
                     case 2:
                         aika[i] = sek;
@@ -153,6 +153,19 @@ namespace VKTeht
             }
 
             Console.WriteLine("Tunteja: " + aika[0] + " Minuutteja: " + aika[1] + " Sekuntteja: " + aika[2]);
+        }
+        static void Teht6()
+        {
+            /* Auton kulutus on 7.02 litraa 100 kilometrin matkalla ja bensan hinta on 1.595 Euroa. 
+             * Tee ohjelma, joka tulostaa ajetulla matkalla (kysytaan kayttajalta) kuluvan bensan maaran 
+             * seka bensaan menevan rahan maaran. */
+            double litraKm = (7.02 / 100);
+            double bHinta = 1.595;
+
+            Console.Write("Kuinka paljon ajetaan: ");
+            int km = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Bensaa kuluu " + (litraKm * km).ToString("#.##") + " Litraa ja se maksaa " + (litraKm*km*bHinta).ToString("#.##") + " Euroa.");
         }
     }
 }
