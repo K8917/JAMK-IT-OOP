@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht4();
+            Teht5();
         }
 
         static void Harj1()
@@ -128,7 +128,31 @@ namespace VKTeht
         }
         static void Teht5()
         {
+            /* Tee ohjelma, joka nayttaa annetun sekuntimaaran tunteina, 
+             * minuutteina ja sekunteina. Aikamaare sekuntteina kysytään kayttajalta. */
+            int[] aika = new int[3];
 
+            Console.Write("Anna sekuntit: ");
+            int sek = int.Parse(Console.ReadLine());
+            for (int i = 0; i < 3; ++i)
+            {
+                switch (i)
+                {
+                    case 0:
+                        aika[i] = (sek / 3600);
+                        sek -= aika[i];
+                        break;
+                    case 1:
+                        aika[i] = (sek / 60);
+                        sek -= aika[i];
+                        break;
+                    case 2:
+                        aika[i] = sek;
+                        break;
+                }
+            }
+
+            Console.WriteLine("Tunteja: " + aika[0] + " Minuutteja: " + aika[1] + " Sekuntteja: " + aika[2]);
         }
     }
 }
