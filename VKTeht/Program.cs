@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht18();
+            Teht15();
         }
 
         static void Harj1()
@@ -400,7 +400,37 @@ namespace VKTeht
         }
         static void Teht19()
         {
+            string[] sana1 = { "A", "r", "v", "a", "a" };
+            string[] sana2 = { "_", "_", "_", "_", "_" };
 
+            string tmp;
+            string tmp2;
+
+            bool x = new bool();
+            do
+            {
+                x = false;
+
+                Console.Write("Arvaa kirjain: ");
+                string k = Console.ReadLine();
+
+                int ind = Array.IndexOf(sana1, k);
+
+                if (ind > -1)
+                {
+                    sana2[ind] = sana1[ind];
+                    sana1[ind] = "";
+                    Console.WriteLine("{0} {1} {2} {3} {4}", sana2);
+                }
+
+                tmp = String.Join("", sana1);
+                        
+                if (tmp.Equals(""))
+                {
+                    x = true;
+                }
+                
+            } while (!(x));
         }
         static void Teht20()
         {
