@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht15();
+            Teht20();
         }
 
         static void Harj1()
@@ -434,7 +434,28 @@ namespace VKTeht
         }
         static void Teht20()
         {
+            int[] luvut = new int[2];
+            Teht20_class eka = new Teht20_class();
 
+            do
+            {
+                Console.Write("Anna kaksi lukua: ");
+                for (int i = 0; i < 2; ++i)
+                {
+                    luvut[i] = int.Parse(Console.ReadLine());
+                }
+
+                if (luvut[0] == 0 || luvut[1] == 0)
+                {
+                    break;
+                }
+
+                eka.SetI(luvut[0], luvut[1]);
+                eka.Tulostus();
+
+            } while (true);
+
+            Console.WriteLine("Tama ohjelma on turha.");
         }
     }
 }
