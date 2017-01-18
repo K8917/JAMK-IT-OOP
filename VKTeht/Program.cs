@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht16();
+            Teht18();
         }
 
         static void Harj1()
@@ -354,11 +354,49 @@ namespace VKTeht
         }
         static void Teht17()
         {
+            int[] num1 = { 10, 20, 30, 40, 50 };
+            int[] num2 = { 5, 15, 25, 35, 45, 55 };
+
+            Console.WriteLine("Luvut taulukossa 1: " + num1[0] + ", " + num1[1] + ", " + num1[2] + ", " + num1[3] + ", " + num1[4]);
+            Console.WriteLine("Luvut taulukossa 2: " + num2[0] + ", " + num2[1] + ", " + num2[2] + ", " + num2[3] + ", " + num2[4]);
+
+            int[] numA = new int[num1.Length + num2.Length];
+
+            Array.Copy(num1, numA, num1.Length);
+            Array.Copy(num2, 0, numA, num1.Length, num2.Length);
+
+            Array.Sort(numA);
+            Console.Write("Yhdistetyt numerot jarjestyksessa: ");
+            for (int i = 0; i < numA.Length; ++i)
+            {
+                Console.Write(numA[i]);
+                if (i < numA.Length-1)
+                {
+                    Console.Write(", ");
+                }
+            }
+            Console.Write('\n');
 
         }
         static void Teht18()
         {
+            Console.Write("Kirjoita sana: ");
+            string sana = Console.ReadLine();
 
+            sana = sana.Substring(0, sana.Length);
+            char[] sana2 = sana.ToCharArray();
+
+            Array.Reverse(sana2);
+            string tmp = new string(sana2);
+           
+            if (tmp.Equals(sana))
+            {
+                Console.WriteLine("Sana on palindromi");
+            }
+            else
+            {
+                Console.WriteLine("Sana ei ole palindromi");
+            }
         }
         static void Teht19()
         {
