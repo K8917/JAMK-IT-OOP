@@ -10,7 +10,7 @@ namespace VKTeht
     {
         static void Main(string[] args)
         {
-            Teht7();
+            Teht16();
         }
 
         static void Harj1()
@@ -179,6 +179,194 @@ namespace VKTeht
             {
                 Console.WriteLine("Ei Karkausvuosi");
             }
+        }
+        static void Teht8()
+        {
+            uint[] num = new uint[3];
+
+            Console.Write("Anna kolme lukua: ");
+            for (int i = 0; i < 3; ++i)
+            {
+                num[i] = uint.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Isoin luku: {0}", (num.Max()));
+        }
+        static void Teht9()
+        {
+            int luku = new int();
+            int summa = new int();
+            do
+            {
+                Console.Write("Anna luku: ");
+                luku = int.Parse(Console.ReadLine());
+
+                summa += luku;
+
+            } while (luku != 0);
+
+            Console.WriteLine("Lukujen summa: {0}", summa);
+        }
+        static void Teht10()
+        {
+            int[] arvot = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
+
+            for (int i = 0; i < arvot.Length; ++i)
+            {
+                if (arvot[i] % 2 == 0)
+                {
+                    Console.WriteLine("{0}: HEP", arvot[i]);
+                }
+            }
+        }
+        static void Teht11()
+        {
+            Console.Write("Kuinka korkea: ");
+            uint luku = uint.Parse(Console.ReadLine());
+
+            for (uint i = 1; i < luku+1; ++i)
+            {
+                for (uint j = 0; j < i; ++j)
+                {
+                    Console.Write("*");
+                }
+                Console.Write('\n');
+            }
+        }
+        static void Teht12()
+        {
+            string[] luvut = new string[5];
+            Console.WriteLine("Anna viisi lukua: ");
+
+            for (int i = 0; i < 5; ++i)
+            {
+                luvut[i] = Console.ReadLine();
+            }
+
+            Array.Reverse(luvut);
+            Console.WriteLine("Luvut kaanteisessa jarjestyksessa: {0}, {1}, {2}, {3}, {4}", luvut);
+        }
+        static void Teht13()
+        {
+            uint[] arvostelut = new uint[5];
+            uint summa = new uint();
+
+            for (int i = 0; i < 5; ++i)
+            {
+                Console.Write("Arvostele hyppy: ");
+                arvostelut[i] = uint.Parse(Console.ReadLine());
+            }
+
+            for (int j = 0; j < arvostelut.Length; ++j)
+            {
+                if (!(arvostelut[j] == arvostelut.Max() || arvostelut[j] == arvostelut.Min()))
+                {
+                    summa += arvostelut[j];
+                }
+            }
+
+            Console.WriteLine("Summa: {0}", summa);
+        }
+        static void Teht14()
+        {
+            uint[] num = new uint[6];
+            uint luku = new uint();
+
+            Console.WriteLine("Lopeta antamalla 6");
+
+            do
+            {
+                Console.Write("Anna arvosana (0-5): ");
+                luku = uint.Parse(Console.ReadLine());
+                
+                if (luku >= 0 && luku <= 5)
+                {
+                    ++num[luku];
+                }
+
+            } while (luku != 6);
+
+            for (int i = 0; i < num.Length; ++i)
+            {
+                Console.Write("{0}: ", i);
+                for (int j = 0; j < num[i]; ++j)
+                {
+                    Console.Write("*");
+                }
+                Console.Write('\n');
+            }
+        }
+        static void Teht15()
+        {
+            Console.Write("Puun korkeus: ");
+            uint luku = uint.Parse(Console.ReadLine());
+            int x = 0;
+
+            for (int h = 1; h < luku-1; ++h)
+            {
+                for (int s = 0; s < luku-h-2; ++s)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 0; j < h+x; ++j)
+                {
+                    Console.Write("*");
+                }
+                x += 1;
+
+                Console.Write('\n');
+            }
+
+            for (int j = 0; j < 2; ++j)
+            {
+                for (int t = 0; t < x-1; ++t)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine("*");
+            }
+        }
+        static void Teht16()
+        {
+            Random rnd = new Random();
+            int rand = rnd.Next(0, 100);
+            int arvaus = new int();
+            int arvaukset = new int();
+
+            do
+            {
+                Console.Write("Arvaa luku: ");
+                arvaus = int.Parse(Console.ReadLine());
+                
+                if (arvaus < rand)
+                {
+                    Console.WriteLine("Luku on isompi");
+                }
+                else if (arvaus > rand)
+                {
+                    Console.WriteLine("Luku on pienempi");
+                }
+                ++arvaukset;
+            } while (arvaus != rand);
+
+            Console.WriteLine("Arvasit luvun {0} kerralla", arvaukset);
+        }
+        static void Teht17()
+        {
+
+        }
+        static void Teht18()
+        {
+
+        }
+        static void Teht19()
+        {
+
+        }
+        static void Teht20()
+        {
+
         }
     }
 }

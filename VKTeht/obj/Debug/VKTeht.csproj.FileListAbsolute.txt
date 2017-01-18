@@ -10,3 +10,9 @@ D:\K8917\VKTeht\obj\Debug\VKTeht.pdb
 D:\K8917\VKTeht\bin\Debug\VKTeht.exe
 D:\K8917\VKTeht\bin\Debug\VKTeht.pdb
 D:\K8917\VKTeht\obj\Debug\VKTeht.csprojResolveAssemblyReference.cache
+C:\Users\Sami\Documents\GitRepo\VKTeht\bin\Debug\VKTeht.exe.config
+C:\Users\Sami\Documents\GitRepo\VKTeht\obj\Debug\VKTeht.exe
+C:\Users\Sami\Documents\GitRepo\VKTeht\obj\Debug\VKTeht.pdb
+C:\Users\Sami\Documents\GitRepo\VKTeht\obj\Debug\VKTeht.csprojResolveAssemblyReference.cache
+C:\Users\Sami\Documents\GitRepo\VKTeht\bin\Debug\VKTeht.exe
+C:\Users\Sami\Documents\GitRepo\VKTeht\bin\Debug\VKTeht.pdb
