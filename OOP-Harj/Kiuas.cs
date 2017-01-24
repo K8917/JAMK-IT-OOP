@@ -9,20 +9,19 @@ namespace OOP_Harj
     class Kiuas
     {
         private bool onOff_;
-        private uint temp_;
-        private uint steam_;
+        public uint temp_ { get; set; }
+        public uint steam_ { get; set; }
 
         public Kiuas ()
         {
-            this.onOff_ = false;
-            this.temp_ = 0;
-            this.steam_ = 0;
+            onOff_ = false;
         }
 
-        public Kiuas(uint temp, uint steam)
+        public Kiuas(uint temp = 0, uint steam = 0)
+            : this()
         {
-            this.temp_ = temp;
-            this.steam_ = steam;
+            temp_ = temp;
+            steam_ = steam;
         }
 
         public void TurnOnOff()
@@ -39,25 +38,14 @@ namespace OOP_Harj
             }
         }
 
-        public void SetTemp(uint temp)
+        public string PrintInfo()
         {
-            if (this.onOff_ != false)
+            if (onOff_ == false)
             {
-                this.temp_ = temp;
+                return "Kiuas ei ole paalla";
             }
-        }
-
-        public void SetSteam(uint steam)
-        {
-            if (this.onOff_ != false)
-            {
-                this.steam_ = steam;
-            }
-        }
-
-        public void PrintInfo()
-        {
             string tmp;
+            string tmp2;
             if (this.steam_ < 33)
             {
                 tmp = "Alhainen";
@@ -71,7 +59,7 @@ namespace OOP_Harj
                 tmp = "Liikaa";
             }
 
-            Console.WriteLine("Lampotila: " + this.temp_ + "'C, Vesihoyry: " + tmp);
+            return tmp2 = "Lampotila: " + this.temp_ + "'C, Vesihoyry: " + tmp;
         }
     }
 }
