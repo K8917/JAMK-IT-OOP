@@ -25,7 +25,7 @@ namespace OOP_Harj
             this.steam_ = steam;
         }
 
-        public bool TurnOnOff()
+        public void TurnOnOff()
         {
             if (this.onOff_ == false)
             {
@@ -37,18 +37,22 @@ namespace OOP_Harj
                 this.onOff_ = false;
                 Console.WriteLine("Kiuas on pois paalta");
             }
-
-            return this.onOff_;
         }
 
         public void SetTemp(uint temp)
         {
-            this.temp_ = temp;
+            if (this.onOff_ != false)
+            {
+                this.temp_ = temp;
+            }
         }
 
         public void SetSteam(uint steam)
         {
-            this.steam_ = steam;
+            if (this.onOff_ != false)
+            {
+                this.steam_ = steam;
+            }
         }
 
         public void PrintInfo()

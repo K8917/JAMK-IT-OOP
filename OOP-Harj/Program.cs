@@ -10,40 +10,17 @@ namespace OOP_Harj
     {
         static void Main(string[] args)
         {
-            Kiuas k1 = new Kiuas(10, 5);
-            int valinta = new int();
+            // Steam: Alhainen < 33, Sopiva < 66, Liikaa < 100
+            Kiuas k1 = new Kiuas();
+            
+            k1.TurnOnOff();
+            k1.SetTemp(30);
+            k1.SetSteam(60);
+            k1.PrintInfo();
 
-            do
-            {
-                Console.Write("\n[1] Laita kiuas paalle/pois paalta\n" +
-                    "[2] Lisaa lampotilaa\n" +
-                    "[3] Lisaa vesihoyrya\n" +
-                    "[4] Tulosta kiukaan tiedot\n" +
-                    "[5] Lopeta\n");
-
-                valinta = int.Parse(Console.ReadLine());
-
-                switch (valinta)
-                {
-                    case 5:
-                        break;
-                    case 1:
-                        k1.TurnOnOff();
-                        break;
-                    case 2:
-                        Console.Write("Kuinka paljon lisataan lampotilaa: ");
-                        k1.SetTemp(uint.Parse(Console.ReadLine()));
-                        break;
-                    case 3:
-                        Console.Write("Kuinka paljon lisataan vesihoyrya: ");
-                        k1.SetSteam(uint.Parse(Console.ReadLine()));
-                        break;
-                    case 4:
-                        k1.PrintInfo();
-                        break;
-                }
-
-            } while (valinta != 5);
+            k1.SetTemp(90);
+            k1.SetSteam(10);
+            k1.PrintInfo();
         }
     }
 }
