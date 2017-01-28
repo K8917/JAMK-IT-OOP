@@ -76,7 +76,20 @@ namespace OOP_Harj
             }
 
             Console.WriteLine();
+            
+            // Harjoitus 6
+            List<Levy> Levyt = new List<Levy>();
+            Uuni h1 = new Uuni(250, true);
+            Levy l1 = new Levy(12, true);
+            Levy l2 = new Levy(12, true);
+            Levy l3 = new Levy(0, false);
+            Levy l4 = new Levy(0, false);
+            Levyt.Add(l1);
+            Levyt.Add(l2);
+            Levyt.Add(l3);
+            Levyt.Add(l4);
 
+            Console.WriteLine(h1.Tulosta(ref Levyt));
         }
     }
 }
