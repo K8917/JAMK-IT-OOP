@@ -92,10 +92,10 @@ namespace OOP_Harj
 
             do
             {
-                Console.Write("Mille kerrokselle haluat > ");
+                Console.Write("Mille kerrokselle haluat (1-5) > ");
                 tmp = Console.ReadLine();
                 x = int.TryParse(tmp, out num);
-                if (num >= 0 && num <= 5 && x)
+                if (num > 0 && num <= 5 && x)
                 {
                     hi1.Floor = num;
                 }
@@ -104,7 +104,7 @@ namespace OOP_Harj
                     Console.WriteLine("Kerrosta ei ole");
                 }
 
-                Console.WriteLine("Kerros on: " + hi1.Floor);
+                Console.WriteLine("Hissi on kerroksella : " + hi1.Floor);
 
             } while (x);
             */
