@@ -82,9 +82,36 @@ namespace OOP_Harj
 
             Console.WriteLine(h1.Tulosta(ref Levyt));
             
-            // Harjoitus 2.4
+            // Harjoitus 2.1
+            Hissi hi1 = new Hissi();
+            string tmp;
+            int num;
+            bool x;
+
+            Console.WriteLine("Lopeta painamalla Ctrl+C");
+
+            do
+            {
+                Console.Write("Mille kerrokselle haluat > ");
+                tmp = Console.ReadLine();
+                x = int.TryParse(tmp, out num);
+                if (num >= 0 && num <= 5 && x)
+                {
+                    hi1.Floor = num;
+                }
+                else
+                {
+                    Console.WriteLine("Kerrosta ei ole");
+                }
+
+                Console.WriteLine("Kerros on: " + hi1.Floor);
+
+            } while (x);
+            */
+            // Harjoitus 2.2
 
 
+            /*
             // Harjoitus 2.5
             Radio r1 = new Radio(5,5000.5);
             r1.TurnOnOff();
