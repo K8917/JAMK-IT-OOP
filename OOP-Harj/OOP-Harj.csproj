@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Radio.cs" />
     <Compile Include="Uuni.cs" />
     <Compile Include="Kiuas.cs" />
     <Compile Include="Opiskelija.cs" />

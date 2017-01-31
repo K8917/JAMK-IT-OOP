@@ -23,7 +23,7 @@ namespace OOP_Harj
             eng_ = eng;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Nimi: " + name_ + " Ryhma: " + ryhma_ + " Matematiikka: " + math_ + " Englanti: " + eng_;
         }
