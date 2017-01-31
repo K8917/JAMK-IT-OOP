@@ -83,7 +83,7 @@ namespace OOP_Harj
         private bool lOnOff_;
         private int lTemp_;
 
-        public bool OnOff
+        public override bool OnOff
         {
             get
             {
@@ -94,7 +94,7 @@ namespace OOP_Harj
                 lOnOff_ = value;
             }
         }
-        public int Temp
+        public override int Temp
         {
             get
             {

@@ -10,7 +10,8 @@ namespace OOP_Harj
     {
         static void Main(string[] args)
         {
-            // Harjoitus 1
+            /*
+            // Harjoitus 1.1
             Kiuas k1 = new Kiuas();
             k1.TurnOnOff();
             k1.temp_ = 50;
@@ -18,9 +19,7 @@ namespace OOP_Harj
             Console.WriteLine(k1.PrintInfo());
             k1.TurnOnOff();
 
-            Console.WriteLine();
-
-            // Harjoitus 2
+            // Harjoitus 1.2
             Pesukone p1 = new Pesukone();
             Pesukone p2 = new Pesukone(1, 50, 30);
             p1.VaihdaPesumuoto(0);
@@ -31,9 +30,7 @@ namespace OOP_Harj
             p1.Aloitus();
             Console.WriteLine(p2.Tulostus());
 
-            Console.WriteLine();
-
-            // Harjoitus 3
+            // Harjoitus 1.3
             Televisio t1 = new Televisio();
             Televisio t2 = new Televisio(20, 80);
             t1.Volume = 120;
@@ -44,8 +41,6 @@ namespace OOP_Harj
             Console.WriteLine(t1.Tulosta());
             Console.WriteLine(t2.Tulosta());
 
-            Console.WriteLine();
-
             // Harjoitus 4
             Vehicle v1 = new Vehicle();
             v1.name = "Ford";
@@ -55,9 +50,7 @@ namespace OOP_Harj
             v1.speed = 50;
             Console.WriteLine(v1.ToString());
 
-            Console.WriteLine();
-
-            // Harjoitus 5
+            // Harjoitus 1.5
             List<Opiskelija> opiskelijat = new List<Opiskelija>();
             Opiskelija o1 = new Opiskelija("Mikko","A",4,3);
             Opiskelija o2 = new Opiskelija("Matti", "B", 5, 2);
@@ -75,9 +68,7 @@ namespace OOP_Harj
                 Console.WriteLine(opiskelijat[i].ToString());
             }
 
-            Console.WriteLine();
-            
-            // Harjoitus 6
+            // Harjoitus 1.6
             List<Levy> Levyt = new List<Levy>();
             Uuni h1 = new Uuni(250, true);
             Levy l1 = new Levy(12, true);
@@ -90,6 +81,49 @@ namespace OOP_Harj
             Levyt.Add(l4);
 
             Console.WriteLine(h1.Tulosta(ref Levyt));
+            
+            // Harjoitus 2.4
+
+
+            // Harjoitus 2.5
+            Radio r1 = new Radio(5,5000.5);
+            r1.TurnOnOff();
+            r1.ChangeVol(9);
+            r1.ChangeFreq(6000.0);
+            Console.WriteLine("Radion aanenvoimakkuus: " + r1.Vol + ", taajuus: " + r1.Freq);
+            r1.ChangeVol(3);
+            r1.ChangeFreq(1000.0);
+            Console.WriteLine("Radion aanenvoimakkuus: " + r1.Vol + ", taajuus: " + r1.Freq);
+            r1.ChangeVol(20);
+            r1.ChangeFreq(20000.7);
+            Console.WriteLine("Radion aanenvoimakkuus: " + r1.Vol + ", taajuus: " + r1.Freq);
+            r1.TurnOnOff();
+            
+            // Harjoitus 2.6
+            Tavarat t1 = new Tavarat("Tavarat");
+            Kirja ki1 = new Kirja("Kirja", 200);
+            Puhelin p1 = new Puhelin("Puhelin", "Malli 1");
+            CDLevy cd1 = new CDLevy("CD-levy", 20);
+            Console.WriteLine(ki1.Tulosta());
+            Console.WriteLine(p1.Tulosta());
+            Console.WriteLine(cd1.Tulosta());
+            
+            // Harjoitus 2.7
+            Internet i1 = new Internet();
+            Kello ke1 = new Kello();
+            ke1.HaeAika();
+            Console.WriteLine(ke1.Tulosta() + "\nPaina jotain...");
+            Console.ReadKey();
+            ke1.HaeAika();
+            Console.WriteLine(ke1.Tulosta() + "\nPaina jotain...");
+            Console.ReadKey();
+            ke1.HaeAika();
+            Console.WriteLine(ke1.Tulosta() + "\nPaina jotain...");
+            Console.ReadKey();
+            ke1.HaeAika();
+            Console.WriteLine(ke1.Tulosta());
+            */
+            
         }
     }
 }

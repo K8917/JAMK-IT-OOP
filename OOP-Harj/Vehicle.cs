@@ -19,7 +19,7 @@ namespace OOP_Harj
             Console.WriteLine("Nimi: " + name + " Nopeus :" + speed + " Renkaita: " + tyres);
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Nimi: " + name + " Nopeus :" + speed + " Renkaita: " + tyres;
         }

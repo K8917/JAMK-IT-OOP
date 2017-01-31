@@ -10,7 +10,7 @@ namespace OOP_Harj
     {
         private bool onOff_;
         private int vol_;
-        private int freq_;
+        private double freq_;
 
         public bool OnOff
         {
@@ -23,7 +23,7 @@ namespace OOP_Harj
                 onOff_ = value;
             }
         }
-        public int Volume
+        public int Vol
         {
             get
             {
@@ -34,7 +34,7 @@ namespace OOP_Harj
                 vol_ = value;
             }
         }
-        public int Freq
+        public double Freq
         {
             get
             {
@@ -43,6 +43,59 @@ namespace OOP_Harj
             set
             {
                 freq_ = value;
+            }
+        }
+
+        public Radio() { }
+        public Radio(int vol, double freq)
+        {
+            Vol = vol;
+            Freq = freq;
+        }
+
+        public void TurnOnOff()
+        {
+            if (OnOff != false)
+            {
+                Console.WriteLine("Radio on pois paalta");
+                OnOff = false;
+            }
+            else
+            {
+                Console.WriteLine("Radio on paalla");
+                OnOff = true;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="vol">Volume has to be within range 0-9</param>
+        public void ChangeVol(int vol)
+        {
+            if (vol >= 0 && vol <= 9)
+            {
+                Vol = vol;
+            }
+            else
+            {
+                Vol = 9;
+                Console.WriteLine("Yritit kaantaa aanenvoimakkuuden " + vol + ", rikoit radion");
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="freq">Freq has to be within range 2000.0-26000.0</param>
+        public void ChangeFreq(double freq)
+        {
+            if (freq >= 2000.0 && freq <= 26000.0)
+            {
+                Freq = freq;
+            }
+            else
+            {
+                Freq = 2000.0;
+                Console.WriteLine("Yritit kaantaa taajuuden " + freq + ", radiosta kuuluu kohinaa");
             }
         }
     }
