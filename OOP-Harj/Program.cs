@@ -107,10 +107,54 @@ namespace OOP_Harj
                 Console.WriteLine("Hissi on kerroksella : " + hi1.Floor);
 
             } while (x);
-            */
+            
             // Harjoitus 2.2
+            Vahvistin va1 = new Vahvistin();
+            bool x = true;
+            string tmp;
+            int tmp2;
 
-
+            do
+            {
+                Console.Write("Anna aanenvoimakkuus (0-100) > ");
+                tmp = Console.ReadLine();
+                x = int.TryParse(tmp, out tmp2);
+                
+                if (tmp2 < 0)
+                {
+                    va1.Volume = 0;
+                    Console.WriteLine("Liian hiljaisella, aanenvoimakkuus on " + va1.Volume);
+                }
+                else if (tmp2 > 100)
+                {
+                    va1.Volume = 100;
+                    Console.WriteLine("Liian kovalla, aanenvoimakkuus on " + va1.Volume);
+                }
+                else
+                {
+                    va1.Volume = tmp2;
+                    Console.WriteLine("Aanenvoimakkuus: " + va1.Volume);
+                }
+            } while (x);
+            
+            // Harjoitus 2.3
+            Employee emp1 = new Employee("Matti", "Tradenomi", 2000);
+            Boss bo1 = new Boss("Joonas", "Insinoori", 5000, "Volvo", 500);
+            emp1.Tulosta();
+            bo1.Tulosta();
+            bo1.Profession = "Tyoton";
+            bo1.Car = "Rikki";
+            bo1.Salary = 0;
+            bo1.Bonus = 0;
+            bo1.Tulosta();
+            */
+            // Harjoitus 2.4
+            Vene ven1 = new Vene("Vene1", "Romukasa", 1960, "Ruskea", "Soutuvene", 6);
+            Pyora py1 = new Pyora("Pyora1", "Kilpapyora", 2015, "Punainen");
+            Pyora py2 = new Pyora("Pyora2", "Peruspyora", 2005, "Sininen", "7 Vaihdetta");
+            ven1.Tulosta();
+            py1.Tulosta();
+            py2.Tulosta();
             /*
             // Harjoitus 2.5
             Radio r1 = new Radio(5,5000.5);
@@ -150,7 +194,7 @@ namespace OOP_Harj
             ke1.HaeAika();
             Console.WriteLine(ke1.Tulosta());
             */
-            
+
         }
     }
 }

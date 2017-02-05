@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.cs" />
     <Compile Include="Hissi.cs" />
     <Compile Include="Kello.cs" />
+    <Compile Include="Kulkuneuvo.cs" />
     <Compile Include="Tavarat.cs" />
     <Compile Include="Radio.cs" />
     <Compile Include="Uuni.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Televisio.cs" />
+    <Compile Include="Vahvistin.cs" />
     <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
