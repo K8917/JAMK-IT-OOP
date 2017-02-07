@@ -193,13 +193,31 @@ namespace OOP_Harj
             Console.ReadKey();
             ke1.HaeAika();
             Console.WriteLine(ke1.Tulosta());
-            */
+            
             // Harjoitus 3.1
             Ajoneuvo au1 = new Ajoneuvo();
-            Rengas r1 = new Rengas();
-            au1.renkaat_.Add(r1);
+            au1.Nimi = "Moottoripyora1";
+            au1.Merkki = "Wolkswagen";
+            Rengas re1 = new Rengas(21, "Rengas1","ASD");
+            Rengas re2 = new Rengas(21, "Rengas2", "ASD");
+            au1.Renkaat.Add(re2);
+            au1.Renkaat.Add(re1);
+            Console.WriteLine(au1.Tulosta());
+            for (int i = 0; i < au1.Renkaat.Count; ++i)
+            {
+                Console.WriteLine(au1.Renkaat[i].Tulosta());
+            }
 
-            Console.WriteLine("Renkaat: " + au1.renkaat_[0].Koko);
+            //Reinkaiden tietoja voi vaihtaa, mutta alempi kayttaa perusarvoja
+            Ajoneuvo au2 = new Ajoneuvo(4,"Auto2", "Volvo");
+            Console.WriteLine(au2.Tulosta());
+            for (int i = 0; i < au2.Renkaat.Count; ++i)
+            {
+                Console.WriteLine(au2.Renkaat[i].Tulosta());
+            }
+            */
+            // Harjoitus 3.2
+
         }
     }
 }
