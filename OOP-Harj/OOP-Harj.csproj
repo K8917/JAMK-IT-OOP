@@ -46,8 +46,10 @@
     <Compile Include="Ajoneuvo.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Hissi.cs" />
+    <Compile Include="Jaakaappi.cs" />
     <Compile Include="Kello.cs" />
     <Compile Include="Kulkuneuvo.cs" />
+    <Compile Include="Nisakas.cs" />
     <Compile Include="Tavarat.cs" />
     <Compile Include="Radio.cs" />
     <Compile Include="Uuni.cs" />

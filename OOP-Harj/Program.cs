@@ -215,9 +215,45 @@ namespace OOP_Harj
             {
                 Console.WriteLine(au2.Renkaat[i].Tulosta());
             }
-            */
+            
             // Harjoitus 3.2
+            List<Jaakaappi> jk = new List<Jaakaappi>();
+            Maito m1 = new Maito(2,"10.10.2020");
+            Liha l1 = new Liha(6, "01.12.2021");
+            Kananmuna k1 = new Kananmuna(3, "06.11.2019");
+            jk.Add(m1);
+            jk.Add(k1);
+            jk.Add(l1);
 
+            for (int i = 0; i < jk.Count; ++i)
+            {
+                Console.WriteLine(jk[i].ToString());
+            }
+            
+            // Harjoitus 3.3
+            Ihminen ih1 = new Ihminen();
+            ih1.Nimi = "Matti";
+            ih1.Paino = 75;
+            ih1.Pituus = 180;
+            ih1.Ika = 25;
+            Console.WriteLine("Nimi: " + ih1.Nimi + ", Paino: " + ih1.Paino + ", Pituus: " + ih1.Pituus + ", Ika: " + ih1.Ika);
+            Ihminen ih2 = new Ihminen();
+            ih2.Nimi = "Joonas";
+            ih2.Paino = 90;
+            ih2.Pituus = 195;
+            ih2.Ika = 30;
+            Console.WriteLine("Nimi: " + ih2.Nimi + ", Paino: " + ih2.Paino + ", Pituus: " + ih2.Pituus + ", Ika: " + ih2.Ika);
+            ih2.Liiku();
+            Vauva va1 = new Vauva();
+            va1.Ika = 2;
+            va1.Liiku();
+            Vauva va2 = new Vauva();
+            va1.Paino = 10;
+            Aikuinen ai1 = new Aikuinen();
+            ai1.Kasva();
+            Aikuinen ai2 = new Aikuinen();
+            ai1.Liiku();
+            */
         }
     }
 }
