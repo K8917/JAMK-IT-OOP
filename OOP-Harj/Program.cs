@@ -147,7 +147,7 @@ namespace OOP_Harj
             bo1.Salary = 0;
             bo1.Bonus = 0;
             bo1.Tulosta();
-            */
+            
             // Harjoitus 2.4
             Vene ven1 = new Vene("Vene1", "Romukasa", 1960, "Ruskea", "Soutuvene", 6);
             Pyora py1 = new Pyora("Pyora1", "Kilpapyora", 2015, "Punainen");
@@ -155,7 +155,7 @@ namespace OOP_Harj
             ven1.Tulosta();
             py1.Tulosta();
             py2.Tulosta();
-            /*
+            
             // Harjoitus 2.5
             Radio r1 = new Radio(5,5000.5);
             r1.TurnOnOff();
@@ -194,7 +194,12 @@ namespace OOP_Harj
             ke1.HaeAika();
             Console.WriteLine(ke1.Tulosta());
             */
+            // Harjoitus 3.1
+            Ajoneuvo au1 = new Ajoneuvo();
+            Rengas r1 = new Rengas();
+            au1.renkaat_.Add(r1);
 
+            Console.WriteLine("Renkaat: " + au1.renkaat_[0].Koko);
         }
     }
 }
