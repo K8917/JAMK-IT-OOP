@@ -253,7 +253,46 @@ namespace OOP_Harj
             ai1.Kasva();
             Aikuinen ai2 = new Aikuinen();
             ai1.Liiku();
+            
+            // Harj 4.2
+            CD cd1 = new CD("CD 1","Artisti maksaa");
+            string songName;
+            string l;
+            for (int i = 0; i < 10; ++i)
+            {
+                l = "6:0" + i;
+                songName = "Song " + i;
+                Song tmp = new Song(songName, l);
+                cd1.Songs.Add(tmp);
+            }
+            cd1.PrintInfo();
             */
+            // Harjoitus 4.3
+            Cardgame cg1 = new Cardgame();
+            int count = 0;
+            for (int i = 0; i < 4; ++i)
+            {
+                for (int j = 0; j < 13; ++j)
+                {
+                    Card tmp = new Card(cg1.cardTypes[i]);
+                    tmp.CardNum = j+1;
+                    ++count;
+                    cg1.Cards.Add(count, tmp);
+                }
+            }
+            // Tulosta kortit
+            Console.WriteLine("Kortit jarjestyksessa: \n");
+            foreach (KeyValuePair<int, Card> card in cg1.Cards)
+            {
+                Console.WriteLine("{0} : kortti on {1}#{2}", card.Key, card.Value.CardType, card.Value.CardNum);
+            }
+            // Tulosta uudelleen jarjestetyt kortit
+            Console.WriteLine("\n\nKortit sekoitettuna: \n");
+            Cardgame.Shuffle(ref cg1.Cards);
+            foreach (KeyValuePair<int, Card> card in cg1.Cards)
+            {
+                Console.WriteLine("{0} : kortti on {1}#{2}", card.Key, card.Value.CardType, card.Value.CardNum);
+            }
         }
     }
 }

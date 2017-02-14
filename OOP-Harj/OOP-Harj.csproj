@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ajoneuvo.cs" />
+    <Compile Include="CD.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Hissi.cs" />
     <Compile Include="Jaakaappi.cs" />
     <Compile Include="Kello.cs" />
+    <Compile Include="Cardgame.cs" />
     <Compile Include="Kulkuneuvo.cs" />
     <Compile Include="Nisakas.cs" />
     <Compile Include="Tavarat.cs" />
