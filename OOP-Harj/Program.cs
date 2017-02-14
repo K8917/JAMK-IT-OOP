@@ -266,7 +266,7 @@ namespace OOP_Harj
                 cd1.Songs.Add(tmp);
             }
             cd1.PrintInfo();
-            */
+            
             // Harjoitus 4.3
             Cardgame cg1 = new Cardgame();
             int count = 0;
@@ -292,6 +292,13 @@ namespace OOP_Harj
             foreach (KeyValuePair<int, Card> card in cg1.Cards)
             {
                 Console.WriteLine("{0} : kortti on {1}#{2}", card.Key, card.Value.CardType, card.Value.CardNum);
+            }
+            */
+            // Harjoitus 4.4
+            Joukkue j1 = new Joukkue("JYP", "Jyvaskyla");
+            foreach (Pelaaja pelaaja in j1.)
+            {
+
             }
         }
     }

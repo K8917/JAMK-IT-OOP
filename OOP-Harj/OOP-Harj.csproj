@@ -48,6 +48,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Hissi.cs" />
     <Compile Include="Jaakaappi.cs" />
+    <Compile Include="Joukkue.cs" />
     <Compile Include="Kello.cs" />
     <Compile Include="Cardgame.cs" />
     <Compile Include="Kulkuneuvo.cs" />
