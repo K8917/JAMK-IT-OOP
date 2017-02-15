@@ -296,9 +296,11 @@ namespace OOP_Harj
             */
             // Harjoitus 4.4
             Joukkue j1 = new Joukkue("JYP", "Jyvaskyla");
-            foreach (Pelaaja pelaaja in j1.)
+            Joukkue.HaePelaajat(ref j1);
+            Console.WriteLine("Pelaajat: ");
+            foreach (Pelaaja pelaaja in j1.Pelaajat)
             {
-
+                Console.WriteLine(" - Numero: " + pelaaja.Numero + " Nimi: " + pelaaja.Etunimi + " " + pelaaja.Sukunimi + ", Ika: " + pelaaja.Ika);
             }
         }
     }

@@ -14,7 +14,6 @@ namespace OOP_Harj
         public Joukkue()
         {
             Pelaajat = new List<Pelaaja>();
-            
         }
         public Joukkue(string nimi, string kk)
             : this()
