@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -293,7 +294,7 @@ namespace OOP_Harj
             {
                 Console.WriteLine("{0} : kortti on {1}#{2}", card.Key, card.Value.CardType, card.Value.CardNum);
             }
-            */
+            
             // Harjoitus 4.4
             Joukkue j1 = new Joukkue("JYP", "Jyvaskyla");
             Joukkue.HaePelaajat(ref j1);
@@ -302,6 +303,77 @@ namespace OOP_Harj
             {
                 Console.WriteLine(" - Numero: " + pelaaja.Numero + " Nimi: " + pelaaja.Etunimi + " " + pelaaja.Sukunimi + ", Ika: " + pelaaja.Ika);
             }
+            
+            // Harjoitus 5.1
+            System.IO.StreamWriter outputFile = null;
+            string docpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            outputFile = new System.IO.StreamWriter(docpath + @"\T1TextLines.txt");
+            string name;
+            do
+            {
+                Console.Write("Anna merkkijono, lopeta (qqq): ");
+                name = Console.ReadLine();
+
+                try
+                {
+                    outputFile.WriteLine(name);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    if (outputFile == null)
+                    {
+                        outputFile.Close();
+                    }
+                }
+            } while (outputFile != null && name != "qqq");
+
+            
+            try
+            {
+                outputFile.Close();
+                string text = System.IO.File.ReadAllText(docpath + @"\T1TextLines.txt");
+                System.Console.WriteLine("Tiedoston sisalto: \n" + text);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+            // Harjoitus 5.2
+            string[] lines = null;
+            var lineCount = 0;
+            string docpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            try
+            {
+                lines = System.IO.File.ReadAllLines(docpath + @"\Nimet.txt");
+                lineCount = System.IO.File.ReadAllLines(docpath + @"\Nimet.txt").Count();
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                Console.WriteLine("Tiedostoa ei loydy.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            ConcurrentDictionary<string, int> people = new ConcurrentDictionary<string, int>();
+            foreach (string line in lines)
+            {
+                people.AddOrUpdate(line, 1, (id, count) => count +1);
+            }
+
+            Console.WriteLine("Linjoja tiedostossa: " + lineCount);
+            foreach (KeyValuePair<string, int> tmp in people)
+            {
+                Console.WriteLine("Nimi {0} esiintyy {1} kertaa.", tmp.Key, tmp.Value);
+            }
+            */
+
         }
     }
 }
