@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 namespace OOP_Harj
 {
     // Harj 3.2
-    public interface Jaakaappi
+    public interface IJaakaappi
     {
         int Hinta { get; set; }
         string ViimKaytPvm { get; set; }
         string ToString();
     }
-    public class Maito : Jaakaappi
+    public class Maito : IJaakaappi
     {
         public int Hinta { get; set; }
         public string ViimKaytPvm { get; set; }
@@ -28,7 +28,7 @@ namespace OOP_Harj
             return "Maito, hinta: " + Hinta + ", Viimeinen kaytto pvm: " + ViimKaytPvm;
         }
     }
-    public class Liha : Jaakaappi
+    public class Liha : IJaakaappi
     {
         public int Hinta { get; set; }
         public string ViimKaytPvm { get; set; }
@@ -43,7 +43,7 @@ namespace OOP_Harj
             return "Liha, hinta: " + Hinta + ", Viimeinen kaytto pvm: " + ViimKaytPvm;
         }
     }
-    public class Kananmuna : Jaakaappi
+    public class Kananmuna : IJaakaappi
     {
         public int Hinta { get; set; }
         public string ViimKaytPvm { get; set; }

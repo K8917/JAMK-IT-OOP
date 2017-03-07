@@ -218,7 +218,7 @@ namespace OOP_Harj
             }
             
             // Harjoitus 3.2
-            List<Jaakaappi> jk = new List<Jaakaappi>();
+            List<IJaakaappi> jk = new List<IJaakaappi>();
             Maito m1 = new Maito(2,"10.10.2020");
             Liha l1 = new Liha(6, "01.12.2021");
             Kananmuna k1 = new Kananmuna(3, "06.11.2019");
@@ -433,6 +433,32 @@ namespace OOP_Harj
             }
             outputFile2.Close();
             
+            // Harjoitus 6.1
+            Noppa n1 = new Noppa();
+            int number;
+            int number2;
+            Console.WriteLine("Nopan luku: " + n1.Heita());
+
+            Console.Write("Kuinka paljon heitetaan: ");
+            string line = Console.ReadLine();
+            bool result = int.TryParse(line, out number);
+            Console.WriteLine("Lukujen keskiarvo: " + n1.HeitaPaljon(number));
+
+            Console.Write("Kuinka paljon heitetaan: ");
+            string line2 = Console.ReadLine();
+            bool result2 = int.TryParse(line2, out number2);
+            if (result2)
+            {
+                List<int> tmp = n1.HeitaPaljonParemmin(number2);
+                Console.WriteLine(" -Keskiarvo: " + tmp.Average());
+                int x = 1;
+                foreach (int i in tmp)
+                {
+                    Console.WriteLine(" -Luku: " + x + " = " + i);
+                    x++;
+                }
+            }
+            
             // Harjoitus 6.2
             List<Products> pro = new List<Products>();
             Milk mi = new Milk(5,"Maito");
@@ -448,6 +474,44 @@ namespace OOP_Harj
             {
                 Console.WriteLine(product.Nimi + ", " + product.Hinta + "€");
             }
+            */
+            // Harjoitus 6.3
+
+            /*
+            // Harjoitus 6.4
+            List<Shape> sh = new List<Shape>();
+            Circle cir = new Circle();
+            cir.Nimi = "Circle1";
+            cir.Halkaisija = 1.7;
+            Circle cir2 = new Circle();
+            cir2.Nimi = "Circle2";
+            cir2.Halkaisija = 5.7;
+            Circle cir3 = new Circle();
+            cir3.Nimi = "Circle3";
+            cir3.Halkaisija = 2.7;
+            Rectangle rec3 = new Rectangle();
+            rec3.Nimi = "Rect3";
+            rec3.Leveys = 4;
+            rec3.Korkeus = 3;
+            Rectangle rec2 = new Rectangle();
+            rec2.Nimi = "Rect2";
+            rec2.Leveys = 1;
+            rec2.Korkeus = 9;
+            Rectangle rec = new Rectangle();
+            rec.Nimi = "Rect1";
+            rec.Leveys = 5;
+            rec.Korkeus = 7;
+            sh.Add(cir);
+            sh.Add(cir2);
+            sh.Add(cir3);
+            sh.Add(rec);
+            sh.Add(rec2);
+            sh.Add(rec3);
+
+            foreach (Shape s in sh)
+            {
+                Console.WriteLine("Nimi: " + s.Nimi + " Ala: " + s.Ala().ToString("0.##") + " Ymparys: " + s.Ymparys().ToString("0.##"));
+            }
             
             // Harjoitus 6.5
             double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
@@ -457,6 +521,20 @@ namespace OOP_Harj
             double max = ArrayCalcs.Max(ref array);
             Console.WriteLine("Sum: {0} \nAvg: {1} \nMin: {2} \nMax: {3}", sum,avg,min,max);
             */
+            // Harjoitus 6.6
+            Invoice invo = new Invoice();
+            invo.Customer = "Matti Mattila";
+            InvoiceItem invoitem1 = new InvoiceItem("Sukka", 2.81, 40);
+            InvoiceItem invoitem2 = new InvoiceItem("Housut", 15.42, 10);
+            InvoiceItem invoitem3 = new InvoiceItem("Paita", 30.33, 20);
+            InvoiceItem invoitem4 = new InvoiceItem("Vyo", 20.00, 30);
+
+            invo.Items.Add(invoitem1);
+            invo.Items.Add(invoitem2);
+            invo.Items.Add(invoitem3);
+            invo.Items.Add(invoitem4);
+
+            invo.PrintInvoice();
         }
     }
 }
