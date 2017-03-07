@@ -14,14 +14,14 @@ namespace OOP_Harj
         {
             Items = new List<InvoiceItem>();
         }
-        public string Total()
+        public double Total()
         {
             double tmp = 0;
             foreach (InvoiceItem invo in Items)
             {
                 tmp += invo.Total();
             }
-            return tmp.ToString();
+            return tmp;
         }
         public void PrintInvoice()
         {
