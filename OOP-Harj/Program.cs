@@ -372,7 +372,68 @@ namespace OOP_Harj
             {
                 Console.WriteLine("Nimi {0} esiintyy {1} kertaa.", tmp.Key, tmp.Value);
             }
+            
+            // Harjoitus 5.3
+            System.IO.StreamWriter outputFile = null;
+            System.IO.StreamWriter outputFile2 = null;
+            List<double> floats = new List<double>();
+            List<double> ints = new List<double>();
+            string docpath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            outputFile = new System.IO.StreamWriter(docpath + @"\T3ints.txt");
+            outputFile2 = new System.IO.StreamWriter(docpath + @"\T3floats.txt");
+
+            do
+            {
+                double number;
+                Console.Write("Anna luku: ");
+                string line = Console.ReadLine();
+                if (line == "")
+                {
+                    break;
+                }
+                bool result = double.TryParse(line, out number);
+                
+                if ((number % 1) == 0)
+                {
+                    ints.Add(number);
+                }
+                else
+                {
+                    floats.Add(number);
+                }
+            } while (true);
+
+            Console.WriteLine("Ints.txt: ");
+            foreach (double d in ints)
+            {
+                try
+                {
+                    outputFile.WriteLine(d);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                Console.WriteLine(d);
+            }
+            outputFile.Close();
+            foreach (double d in floats)
+            {
+                try
+                {
+                    outputFile2.WriteLine(d);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                Console.WriteLine(d);
+            }
+            outputFile2.Close();
             */
+            // Harjoitus 6.2
 
         }
     }
