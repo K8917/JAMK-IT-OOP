@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_Harj
 {
-    class ArrayCalcs
+    public class ArrayCalcs
     {
         public static double Sum(ref double[] temp)
         {
