@@ -432,9 +432,31 @@ namespace OOP_Harj
                 Console.WriteLine(d);
             }
             outputFile2.Close();
-            */
+            
             // Harjoitus 6.2
-
+            List<Products> pro = new List<Products>();
+            Milk mi = new Milk(5,"Maito");
+            Beer be = new Beer(6,"Olut");
+            Cheese ch = new Cheese(7,"Juusto");
+            Butter bu = new Butter(8, "Voi");
+            pro.Add(mi);
+            pro.Add(ch);
+            pro.Add(bu);
+            pro.Add(be);
+            Console.WriteLine("Tuotteita ostoskarryssa: ");
+            foreach (Products product in pro)
+            {
+                Console.WriteLine(product.Nimi + ", " + product.Hinta + "€");
+            }
+            
+            // Harjoitus 6.5
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            double sum = ArrayCalcs.Sum(ref array);
+            double avg = ArrayCalcs.Average(ref array);
+            double min = ArrayCalcs.Min(ref array);
+            double max = ArrayCalcs.Max(ref array);
+            Console.WriteLine("Sum: {0} \nAvg: {1} \nMin: {2} \nMax: {3}", sum,avg,min,max);
+            */
         }
     }
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ajoneuvo.cs" />
+    <Compile Include="ArrayCalcs.cs" />
     <Compile Include="CD.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Hissi.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="Cardgame.cs" />
     <Compile Include="Kulkuneuvo.cs" />
     <Compile Include="Nisakas.cs" />
+    <Compile Include="Products.cs" />
     <Compile Include="Tavarat.cs" />
     <Compile Include="Radio.cs" />
     <Compile Include="Uuni.cs" />
