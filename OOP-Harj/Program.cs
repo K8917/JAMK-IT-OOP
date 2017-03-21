@@ -474,10 +474,7 @@ namespace OOP_Harj
             {
                 Console.WriteLine(product.Nimi + ", " + product.Hinta + "€");
             }
-            */
-            // Harjoitus 6.3
-
-            /*
+            
             // Harjoitus 6.4
             List<Shape> sh = new List<Shape>();
             Circle cir = new Circle();
@@ -520,7 +517,7 @@ namespace OOP_Harj
             double min = ArrayCalcs.Min(ref array);
             double max = ArrayCalcs.Max(ref array);
             Console.WriteLine("Sum: {0} \nAvg: {1} \nMin: {2} \nMax: {3}", sum,avg,min,max);
-            */
+            
             // Harjoitus 6.6
             Invoice invo = new Invoice();
             invo.Customer = "Matti Mattila";
@@ -535,6 +532,7 @@ namespace OOP_Harj
             invo.Items.Add(invoitem4);
 
             invo.PrintInvoice();
+            */
         }
     }
 }
