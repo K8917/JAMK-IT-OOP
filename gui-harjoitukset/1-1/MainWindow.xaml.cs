@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _1_1
+namespace WpfApplication1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,21 @@ namespace _1_1
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+        private void bTruck_Click(object sender, RoutedEventArgs e)
+        {
+            string tmp = tbTruck.Text;
+            int trucks = int.Parse(tmp);
+            ++trucks;
+            tbTruck.Text = trucks.ToString();
+        }
+        private void bCar_Click(object sender, RoutedEventArgs e)
+        {
+            string tmp = tbCar.Text;
+            int cars = int.Parse(tmp);
+            ++cars;
+            tbCar.Text = cars.ToString();
         }
     }
 }
