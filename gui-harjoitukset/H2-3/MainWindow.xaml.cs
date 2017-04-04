@@ -23,40 +23,73 @@ namespace H2_3
         public MainWindow()
         {
             InitializeComponent();
-            
+            MyInitialize();
         }
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            string selection = cb1.Items.CurrentItem.ToString();
+            string selection = cb1.SelectedValue.ToString();
             int rivit = 0;
             bool tmp = int.TryParse(tb1.Text, out rivit);
+            Random r = new Random();
             if (selection.Equals("Lotto") && tmp)
             {
                 for (int i = 0; i < rivit; ++i)
                 {
-                    int[] numerot = lotto();
-                    tb1.Text = "Rivi" + i + numerot[0] + numerot[1] + numerot[2] + numerot[3] + numerot[4] + numerot[5] + numerot[6] + "\n";
+                    int[] numerot = lotto(r);
+                    box1.Text += "Rivi " + i 
+                        + ":   " 
+                        + numerot[0] + "  " 
+                        + numerot[1] + "  "
+                        + numerot[2] + "  "
+                        + numerot[3] + "  "
+                        + numerot[4] + "  "
+                        + numerot[5] + "  "
+                        + numerot[6] 
+                        + "\n";
                 }
             }
             else if (selection.Equals("Viking Lotto"))
             {
-                
+                for (int i = 0; i < rivit; ++i)
+                {
+                    int[] numerot = lotto(r);
+                    box1.Text += "Rivi " + i
+                        + ":   "
+                        + numerot[0] + "  "
+                        + numerot[1] + "  "
+                        + numerot[2] + "  "
+                        + numerot[3] + "  "
+                        + numerot[4] + "  "
+                        + numerot[5]
+                        + "\n";
+                }
             }
             else
             {
-                
+                for (int i = 0; i < rivit; ++i)
+                {
+                    int[] numerot = euro(r);
+                    box1.Text += "Rivi " + i
+                        + ":   "
+                        + numerot[0] + "  "
+                        + numerot[1] + "  "
+                        + numerot[2] + "  "
+                        + numerot[3] + "  "
+                        + numerot[4] + "  *"
+                        + numerot[5] + "  *"
+                        + numerot[6]
+                        + "\n";
+                }
             }
         }
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             box1.Text = "";
-            tb1.Text = "";
         }
 
-        public int[] lotto()
+        public int[] lotto(Random r)
         {
             int[] numerot = new int[7];
-            Random r = new Random();
             for (int i = 0; i < 7; ++i)
             {
                 int tmp = r.Next(1, 39);
@@ -64,10 +97,9 @@ namespace H2_3
             }
             return numerot;
         }
-        public int[] vlotto()
+        public int[] vlotto(Random r)
         {
             int[] numerot = new int[6];
-            Random r = new Random();
             for (int i = 0; i < 6; ++i)
             {
                 int tmp = r.Next(1, 48);
@@ -75,10 +107,9 @@ namespace H2_3
             }
             return numerot;
         }
-        public int[] euro()
+        public int[] euro(Random r)
         {
             int[] numerot = new int[7];
-            Random r = new Random();
             for (int i = 0; i < 5; ++i)
             {
                 int tmp = r.Next(1, 50);
@@ -91,6 +122,11 @@ namespace H2_3
                 numerot[i] = tmp;
             }
             return numerot;
+        }
+
+        private void MyInitialize()
+        {
+            tb1.Text = "";
         }
     }
 }
