@@ -24,5 +24,61 @@ namespace H3_1
         {
             InitializeComponent();
         }
+        Boolean isDrawing = false;
+        Point lineStart;
+        SolidColorBrush brush = new SolidColorBrush(Colors.Black);
+
+        private void My_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            isDrawing = false;
+        }
+
+        private void My_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDrawing)
+            {
+                Point lineEnd = e.GetPosition(MyCanvas);
+                Line l = new Line();
+                l.X1 = lineStart.X;
+                l.Y1 = lineStart.Y;
+                l.X2 = lineEnd.X;
+                l.Y2 = lineEnd.Y;
+                l.Stroke = brush;
+                l.StrokeThickness = 2;
+                MyCanvas.Children.Add(l);
+                lineStart = lineEnd;
+            }
+        }
+
+        private void My_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            isDrawing = true;
+            lineStart = e.GetPosition(MyCanvas);
+        }
+
+        private void My_ButtonClick(object sender, RoutedEventArgs e)
+        {
+            MyCanvas.Children.Clear();
+        }
+        private void ChangeColor2(object sender, RoutedEventArgs e)
+        {
+            brush = new SolidColorBrush(Colors.Yellow);
+        }
+        private void ChangeColor3(object sender, RoutedEventArgs e)
+        {
+            brush = new SolidColorBrush(Colors.Red);
+        }
+        private void ChangeColor4(object sender, RoutedEventArgs e)
+        {
+            brush = new SolidColorBrush(Colors.Blue);
+        }
+        private void ChangeColor5(object sender, RoutedEventArgs e)
+        {
+            brush = new SolidColorBrush(Colors.Green);
+        }
+        private void ChangeColor6(object sender, RoutedEventArgs e)
+        {
+            brush = new SolidColorBrush(Colors.Black);
+        }
     }
 }

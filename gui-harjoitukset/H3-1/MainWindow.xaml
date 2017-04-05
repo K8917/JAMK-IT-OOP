@@ -6,23 +6,44 @@
         xmlns:local="clr-namespace:H3_1"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid Background="#f2f2f2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1.5*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1.5*"/>
-            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Background="#f2f2f2">
-            <Label HorizontalAlignment="Center">Binding to Element</Label>
-            <TextBox x:Name="box"  HorizontalAlignment="Center" Width="100" Height="20" Margin="5"></TextBox>
-            <TextBlock HorizontalAlignment="Center" Width="100" Height="20" Margin="5" TextAlignment="Center" Text="{Binding Path=Text, ElementName=box}"></TextBlock> 
-        </StackPanel>
-        <StackPanel Grid.Column="1" Background="#e7e7e7">
-            
-        </StackPanel>
-        <StackPanel Grid.Column="2" Background="#cecece">
-            
-        </StackPanel>
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="6"  BorderBrush="LightGray" BorderThickness="3">
+            <Canvas Background="white" x:Name="MyCanvas" MouseDown="My_MouseDown" MouseMove="My_MouseMove" MouseUp="My_MouseUp" >
 
+            </Canvas>
+        </Border>
+        <StackPanel x:Name="btn1" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="My_ButtonClick" Content="Poista" Padding="10 5" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+        <StackPanel x:Name="btn2" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ChangeColor2" Background="Yellow" Padding="15 15" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+        <StackPanel x:Name="btn3" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ChangeColor3" Background="Red" Padding="15 15" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+        <StackPanel x:Name="btn4" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ChangeColor4" Background="Blue" Padding="15 15" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+        <StackPanel x:Name="btn5" Grid.Column="5" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ChangeColor5" Background="Green" Padding="15 15" HorizontalAlignment="Left"></Button>
+        </StackPanel>
+        <StackPanel x:Name="btn6" Grid.Column="6" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Click="ChangeColor6" Background="Black" Padding="15 15" HorizontalAlignment="Left"></Button>
+        </StackPanel>
     </Grid>
 </Window>
